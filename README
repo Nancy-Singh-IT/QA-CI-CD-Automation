@@ -1,0 +1,216 @@
+# QA CI/CD Automation
+
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Pytest](https://img.shields.io/badge/Pytest-9.1.1-green)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-black)
+
+A QA automation project demonstrating automated testing with **Python and Pytest**, integrated with a **GitHub Actions CI/CD pipeline**.
+
+## 📌 Project Overview
+
+This project demonstrates how automated tests can be integrated into a CI/CD workflow.
+
+Whenever code is pushed to the `main` branch or a pull request is created, GitHub Actions automatically:
+
+1. Checks out the repository
+2. Sets up Python
+3. Installs the required dependencies
+4. Runs the Pytest test suite
+5. Reports the test results
+
+This helps ensure that automated tests are executed consistently whenever the code changes.
+
+---
+
+## 🛠️ Technologies Used
+
+* Python 3.13
+* Pytest
+* Git
+* GitHub
+* GitHub Actions
+* PowerShell / Windows
+
+---
+
+## 📂 Project Structure
+
+```text
+QA-CI-CD-Automation/
+│
+├── .github/
+│   └── workflows/
+│       └── tests.yml
+│
+├── tests/
+│   └── test_ci_demo.py
+│
+├── .gitignore
+├── pytest.ini
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🧪 Test Cases
+
+The project currently contains three automated test cases:
+
+| Test Case               | Purpose                            |
+| ----------------------- | ---------------------------------- |
+| `test_login_validation` | Validates login-related test logic |
+| `test_product_price`    | Validates product price            |
+| `test_cart_item_count`  | Validates cart item count          |
+
+### Local Test Result
+
+All three tests currently pass successfully.
+
+```text
+3 passed in 0.02s
+```
+
+---
+
+## ⚙️ Running the Tests Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/QA-CI-CD-Automation.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd QA-CI-CD-Automation
+```
+
+### 3. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate the virtual environment
+
+For Windows PowerShell:
+
+```powershell
+venv\Scripts\activate
+```
+
+### 5. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 6. Run the tests
+
+```bash
+pytest -v
+```
+
+Expected result:
+
+```text
+3 passed
+```
+
+---
+
+## 🔄 CI/CD Pipeline
+
+This project uses **GitHub Actions** for continuous integration.
+
+The workflow file is located at:
+
+```text
+.github/workflows/tests.yml
+```
+
+### Pipeline Flow
+
+```text
+Code Push / Pull Request
+          ↓
+    GitHub Actions
+          ↓
+   Checkout Repository
+          ↓
+     Setup Python
+          ↓
+ Install Dependencies
+          ↓
+      Run Pytest
+          ↓
+    Test Results
+```
+
+### Workflow Triggers
+
+The CI pipeline runs when:
+
+* Code is pushed to the `main` branch
+* A pull request is created or updated against the `main` branch
+
+---
+
+## 📄 GitHub Actions Workflow
+
+The GitHub Actions workflow:
+
+* Uses an Ubuntu environment
+* Sets up Python 3.13
+* Installs dependencies from `requirements.txt`
+* Executes the Pytest test suite
+
+The main test command used by the workflow is:
+
+```bash
+pytest -v
+```
+
+---
+
+## 🎯 Skills Demonstrated
+
+This project demonstrates practical experience with:
+
+* QA Automation
+* Test Case Design
+* Python
+* Pytest
+* Automated Testing
+* Git
+* GitHub
+* GitHub Actions
+* CI/CD
+* Version Control
+* Basic DevOps Practices
+
+---
+
+## 🚀 Future Improvements
+
+Possible future improvements include:
+
+* Add Selenium browser automation tests
+* Generate HTML test reports
+* Upload test reports as GitHub Actions artifacts
+* Add test coverage reporting
+* Run tests across multiple Python versions
+* Add additional automated test scenarios
+* Add notifications for failed CI builds
+
+---
+
+## 👩‍💻 Author
+
+**Nancy Singh**
+
+BSc (Hons) Computing System Engineering Student
+
+GitHub: https://github.com/YOUR-USERNAME
